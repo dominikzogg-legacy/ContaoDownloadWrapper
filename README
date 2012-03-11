@@ -1,0 +1,5 @@
+for using it with lighttpd add this to the virtual host
+
+url.rewrite += (
+   "^/tl_files/(.*)" => "download.php",
+)
