@@ -71,12 +71,12 @@ class download
     protected $_intSize = 0;
 
     /**
-     * @var str expire
+     * @var string expire
      */
     protected $_strExpire = '';
 
     /**
-     * @var str lastmodification
+     * @var string lastmodification
      */
     protected $_strLastModification = '';
 
@@ -86,7 +86,7 @@ class download
     protected $_strETag = '';
 
     /**
-     * @var str requestlastmodification
+     * @var string requestlastmodification
      */
     protected $_strRequestLastModification = '';
 
@@ -139,6 +139,8 @@ class download
 
     /**
      * _setPath
+     * @param string $strDocumentRoot
+     * @param string $strPath
      */
     protected function _setPath($strDocumentRoot, $strPath)
     {
