@@ -125,7 +125,7 @@ class download
         $strDocumentRoot = substr($_SERVER['DOCUMENT_ROOT'], -1)  == '/' ? substr($_SERVER['DOCUMENT_ROOT'], 0, -1) : $_SERVER['DOCUMENT_ROOT'];
 
         // path
-        $strPath = strpos($_SERVER['REQUEST_URI'], '?') !== false ? substr($_SERVER['REQUEST_URI'], 0, strpos($_SERVER['REQUEST_URI'], '?')) : $_SERVER['REQUEST_URI'];
+        $strPath = strpos($_SERVER['REQUEST_URI'], '?') !== false ? urldecode(substr($_SERVER['REQUEST_URI'], 0, strpos($_SERVER['REQUEST_URI'], '?'))) : urldecode($_SERVER['REQUEST_URI']);
 
         // set path parts
         $this->_setPath($strDocumentRoot, $strPath);
